@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andres Gallego — Portfolio Audiovisual</title>
+<meta name="description" content="Productor audiovisual y marketer digital. Showreel, trabajos Full HD, reels, experiencia y contacto.">
+<meta property="og:title" content="Andres Gallego — Portfolio Audiovisual">
+<meta property="og:description" content="Productor audiovisual y marketer digital en Valencia, España.">
+<meta property="og:image" content="screenshot.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Instrument+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+	<div class="container nav-in">
+		<a href="#inicio" class="brand">
+			<svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+		<circle cx="32" cy="32" r="30" fill="#242019" stroke="rgba(244,239,229,.25)"/>
+		<text x="30" y="43" font-family="Syne, sans-serif" font-weight="800" font-size="30" fill="#F4EFE5" text-anchor="middle">G</text>
+		<circle cx="46" cy="19" r="5" fill="#F39C2D"/>
+	</svg>
+			<b>ANDRES<i>.</i>GALLEGO</b>
+		</a>
+		<div class="nav-links" id="navLinks">
+			<a href="#trabajos">Trabajos</a>
+			<a href="#reels">Reels</a>
+			<a href="#sobre-mi">Sobre mí</a>
+			<a href="#herramientas">Herramientas</a>
+			<a href="#experiencia">Experiencia</a>
+			<a href="#contacto" class="btn btn-solid">Hablemos</a>
+		</div>
+		<button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span></button>
+	</div>
+</nav>
+
+
+
+
+<!-- ══ HERO · visor de cámara sobre tu showreel ═══════════════════ -->
+<header class="hero" id="inicio">
+	<video class="hero-bg" autoplay muted loop playsinline preload="metadata"></video>
+
+
+	<div class="vf"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i>
+		<div class="hud">
+			<span class="rec">REC</span>
+			<span class="specs">1920 × 1080&nbsp;&nbsp;·&nbsp;&nbsp;24 FPS&nbsp;&nbsp;·&nbsp;&nbsp;VALENCIA, ES</span>
+		</div>
+	</div>
+
+	<div class="container">
+		<p class="hero-eyebrow">Portfolio / 2026</p>
+		<!-- EDITA AQUÍ tu nombre si lo necesitas -->
+		<h1>ANDRES<br>GALLEGO<span class="dot">.</span></h1>
+		<p class="role">Productor audiovisual &amp; marketer digital. Convierto ideas en contenido que retiene, conecta y crece de forma orgánica.</p>
+		<div class="vsi">VISIÓN <i>●</i> ESTRATEGIA <i>●</i> IMPACTO</div>
+		<div class="hero-cta">
+			<a class="btn btn-solid" href="#trabajos">Ver mi trabajo</a>
+			<a class="btn btn-ghost" href="#contacto">Hablemos</a>
+		</div>
+	</div>
+	<div class="scroll-cue">SCROLL</div>
+</header>
+
+<div class="film" aria-hidden="true"></div>
+
+<!-- ══ TRABAJOS FULL HD · filtros + lightbox ══════════════════════ -->
+<section id="trabajos">
+	<div class="container">
+		<div class="s-head rv">
+			<span class="tc">00:01 — Trabajos Full HD</span>
+			<h2>Piezas en alta definición</h2>
+			<p class="s-sub">Selección de proyectos en 1920×1080: campañas, motion graphics y contenido formativo. Haz clic en cualquier pieza para reproducirla.</p>
+			<div class="chips" id="filters">
+				<button class="chip act" data-f="all">Todos</button>
+				<button class="chip" data-f="campanas">Campañas</button>
+				<button class="chip" data-f="motion">Motion Graphics</button>
+				<button class="chip" data-f="elearning">E-learning</button>
+			</div>
+		</div>
+
+		<div class="work-grid" id="workGrid"></div>
+	</div>
+</section>
+
+<!-- ══ REELS · carrusel 9:16 con autoplay ═════════════════════════ -->
+<section id="reels" style="background:var(--ink-2);border-block:1px solid var(--line)">
+	<div class="container">
+		<div class="s-head rv" style="text-align:center;margin-inline:auto">
+			<span class="tc">00:02 — Reels</span>
+			<h2>Formato vertical que engancha</h2>
+			<p class="s-sub" style="margin-inline:auto">Reels e historias para Instagram, TikTok y YouTube Shorts. Se reproducen solos: desliza o deja que el carrusel avance.</p>
+		</div>
+	</div>
+
+	<div class="reel-wrap">
+		<button class="r-nav r-prev" id="rPrev" aria-label="Reel anterior"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+		<button class="r-nav r-next" id="rNext" aria-label="Reel siguiente"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+
+		<div class="reel-track" id="reelTrack"></div>
+		<div class="r-dots" id="rDots"></div>
+	</div>
+</section>
+
+<!-- ══ SOBRE MÍ · foto + logo + bio + educación + idiomas ═════════ -->
+<section id="sobre-mi">
+	<div class="container about-grid">
+		<div class="photo-card rv">
+			<div class="photo-inner">
+				<img class="ag-foto" src="foto.jpg" alt="Andres Felipe Gallego Soto, productor audiovisual" width="482" height="588" loading="lazy">
+				
+			</div>
+			<div class="logo-badge" title="Logo personal">
+				<svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+		<circle cx="32" cy="32" r="30" fill="#242019" stroke="rgba(244,239,229,.25)"/>
+		<text x="30" y="43" font-family="Syne, sans-serif" font-weight="800" font-size="30" fill="#F4EFE5" text-anchor="middle">G</text>
+		<circle cx="46" cy="19" r="5" fill="#F39C2D"/>
+	</svg>
+			</div>
+		</div>
+
+		<div class="about-txt rv" data-d="1">
+			<span class="tc">00:03 — Sobre mí</span>
+			<h2 style="font-family:var(--font-d);font-weight:800;font-size:clamp(1.9rem,4.6vw,3rem);line-height:1.08;margin-top:12px">Detrás de la cámara</h2>
+			<p>Soy productor audiovisual y creador de contenido orientado a comunicación digital, branding y marketing visual. Trabajo desde la idea hasta la entrega: guion, rodaje, edición, motion graphics y postproducción de audio.</p>
+			<p>Me muevo bien en entornos dinámicos, resuelvo problemas sobre la marcha y ejecuto cada proyecto con un enfoque estratégico y creativo, integrando herramientas de IA en el flujo de producción para multiplicar resultados.</p>
+
+			<!-- EDITA AQUÍ tus chips de valores -->
+			<div class="values">
+				<span class="val">Iniciativa</span>
+				<span class="val">Análisis</span>
+				<span class="val">Optimización</span>
+			</div>
+
+			<!-- EDITA AQUÍ tu educación -->
+			<p class="mini-label">Educación</p>
+			<ul class="edu">
+				<li><b>Técnico profesional en audio y video</b><span>2019 – 2022</span></li>
+				<li><b>Diplomado en dirección de arte</b><span>2022</span></li>
+			</ul>
+
+			<!-- EDITA AQUÍ tus idiomas (--w controla la barra) -->
+			<p class="mini-label">Idiomas</p>
+			<div class="lang rv">
+				<div class="lang-row">
+					<div class="lr-top"><b>Español</b><span>NATIVO</span></div>
+					<div class="bar"><i style="--w:100%"></i></div>
+				</div>
+				<div class="lang-row">
+					<div class="lr-top"><b>Inglés</b><span>B2</span></div>
+					<div class="bar"><i style="--w:70%"></i></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- ══ HERRAMIENTAS · EDITA AQUÍ tus herramientas ═════════════════ -->
+<section id="herramientas" style="background:var(--ink-2);border-block:1px solid var(--line)">
+	<div class="container">
+		<div class="s-head rv">
+			<span class="tc">00:04 — Herramientas</span>
+			<h2>Mi caja de herramientas</h2>
+		</div>
+		<div class="tools-groups">
+			<div class="tg rv">
+				<p class="mini-label">Edición audiovisual</p>
+				<div class="t-row">
+					<div class="tool"><div class="t-ico" style="color:#BCA7FF">Ae</div><span>After Effects</span></div>
+					<div class="tool"><div class="t-ico" style="color:#EA77FF">Pr</div><span>Premiere Pro</span></div>
+				</div>
+			</div>
+			<div class="tg rv" data-d="1">
+				<p class="mini-label">Creación y edición de imagen</p>
+				<div class="t-row">
+					<div class="tool"><div class="t-ico" style="color:#31A8FF">Ps</div><span>Photoshop</span></div>
+					<div class="tool"><div class="t-ico" style="color:#FF7A59">Fi</div><span>Firefly</span></div>
+					<div class="tool"><div class="t-ico" style="color:#22C7CF">C</div><span>Canva</span></div>
+				</div>
+			</div>
+			<div class="tg rv" data-d="1">
+				<p class="mini-label">IA &amp; automatización</p>
+				<div class="t-row">
+					<div class="tool"><div class="t-ico" style="color:#FFD23F">Cf</div><span>ComfyUI</span></div>
+					<div class="tool"><div class="t-ico" style="color:#F4EFE5">A\</div><span>Anthropic</span></div>
+					<div class="tool"><div class="t-ico" style="color:#F4EFE5">II</div><span>ElevenLabs</span></div>
+				</div>
+			</div>
+			<div class="tg rv" data-d="2">
+				<p class="mini-label">Gestión organizativa</p>
+				<div class="t-row">
+					<div class="tool"><div class="t-ico" style="color:#F4EFE5">N</div><span>Notion</span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- ══ EXPERIENCIA · EDITA AQUÍ tu trayectoria ════════════════════ -->
+<section id="experiencia">
+	<div class="container">
+		<div class="s-head rv">
+			<span class="tc">00:05 — Experiencia</span>
+			<h2>Trayectoria</h2>
+		</div>
+		<div class="xp">
+
+			<div class="xp-item rv">
+				<span class="xp-period">2026 — ESPAÑA</span>
+				<h3>Producción Audiovisual &amp; Content Strategy</h3>
+				<p class="xp-co">Beetle Print / Beetle Wood</p>
+				<ul>
+					<li>Contenido audiovisual estratégico para Instagram y YouTube Shorts.</li>
+					<li>Formatos optimizados con enfoque experimental y crecimiento 100% orgánico.</li>
+					<li>Edición, narrativa visual y adaptación para distintas audiencias y líneas de negocio.</li>
+				</ul>
+				<div class="metrics">
+					<span class="metric">▶ 8.5K · Instagram</span>
+					<span class="metric">▶ 14K · YouTube Shorts</span>
+				</div>
+			</div>
+
+			<div class="xp-item rv" data-d="1">
+				<span class="xp-period">2022 – 2024</span>
+				<h3>Dirección Audiovisual &amp; Contenido</h3>
+				<p class="xp-co">Sistemas Informáticos del Valle</p>
+				<ul>
+					<li>Producción audiovisual para e-learning y campañas digitales.</li>
+					<li>Edición profesional en Premiere Pro y After Effects; motion graphics estratégicos.</li>
+					<li>Postproducción de audio y optimización visual para plataformas digitales.</li>
+				</ul>
+			</div>
+
+			<div class="xp-item rv" data-d="2">
+				<span class="xp-period">2019</span>
+				<h3>Editor Audiovisual &amp; Asistente de Producción</h3>
+				<p class="xp-co">Canal 2 TV</p>
+				<ul>
+					<li>Edición de noticias y contenido televisivo regional.</li>
+					<li>Motion graphics y soporte técnico audiovisual.</li>
+					<li>Manejo de cámaras y asistencia en producción.</li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+<!-- ══ HABILIDADES CLAVE · EDITA AQUÍ ═════════════════════════════ -->
+<section id="habilidades" style="padding-top:0">
+	<div class="container">
+		<div class="s-head rv">
+			<span class="tc">Habilidades clave</span>
+			<h2>Lo que pongo sobre la mesa</h2>
+		</div>
+		<div class="sk-grid">
+			<div class="sk rv">
+				<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 5v14M17 5v14M3 9h4M3 15h4M17 9h4M17 15h4"/></svg>
+				<h3>Edición de video</h3>
+				<p>Ritmo, corte y color al servicio de la historia. Full HD y vertical.</p>
+			</div>
+			<div class="sk rv" data-d="1">
+				<svg viewBox="0 0 24 24"><rect x="3" y="3" width="13" height="13" rx="2"/><rect x="8" y="8" width="13" height="13" rx="2"/></svg>
+				<h3>Motion graphics</h3>
+				<p>Identidades animadas y piezas gráficas en movimiento que destacan.</p>
+			</div>
+			<div class="sk rv" data-d="2">
+				<svg viewBox="0 0 24 24"><path d="M12 5c-2.5-1.6-5.5-1.6-8 0v13c2.5-1.6 5.5-1.6 8 0c2.5-1.6 5.5-1.6 8 0V5c-2.5-1.6-5.5-1.6-8 0z"/><path d="M12 5v13"/></svg>
+				<h3>Storytelling</h3>
+				<p>Narrativas que retienen del primer segundo al último frame.</p>
+			</div>
+			<div class="sk rv" data-d="3">
+				<svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+				<h3>Comunicación visual</h3>
+				<p>Branding y marketing visual con enfoque en impacto y conversión.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div class="film" aria-hidden="true"></div>
+
+<!-- ══ CONTACTO · datos + formulario ══════════════════════════════ -->
+<section id="contacto">
+	<div class="container ct-grid">
+		<div class="rv">
+			<span class="tc">00:06 — Contacto</span>
+			<h2 style="font-family:var(--font-d);font-weight:800;font-size:clamp(1.9rem,4.6vw,3rem);line-height:1.08;margin-top:12px">¿Creamos algo con impacto?</h2>
+			<p class="s-sub">Disponible para proyectos de producción audiovisual, contenido para redes y estrategia visual.</p>
+			<div class="ct-rows">
+				<div class="ct-row">
+					<span class="ct-ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+					<div><small>Email</small><a href="mailto:andresfelipe958@gmail.com">andresfelipe958@gmail.com</a></div>
+				</div>
+				<div class="ct-row">
+					<span class="ct-ico"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"/></svg></span>
+					<div><small>Teléfono</small><a href="tel:+34613382998">+34 613 382 998</a></div>
+				</div>
+				<div class="ct-row">
+					<span class="ct-ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+					<div><small>Ubicación</small><span class="v">Oliva, Valencia — España</span></div>
+				</div>
+				<div class="ct-row">
+					<span class="ct-ico"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>
+					<div><small>LinkedIn</small><a href="https://www.linkedin.com/in/andres-felipe-gallego-soto-645b08227/" rel="noopener" target="_blank">Andres Felipe Gallego Soto</a></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-card rv" data-d="1">
+							<label for="f-nombre">Nombre</label>
+				<input id="f-nombre" type="text" placeholder="Tu nombre">
+				<label for="f-email">Email</label>
+				<input id="f-email" type="email" placeholder="tucorreo@ejemplo.com">
+				<label for="f-msg">¿Qué necesitas?</label>
+				<textarea id="f-msg" placeholder="Cuéntame sobre tu proyecto…"></textarea>
+				<a class="btn btn-solid" href="mailto:andresfelipe958@gmail.com">Enviar mensaje</a>
+				
+		</div>
+	</div>
+</section>
+
+
+<footer>
+	<div class="container foot">
+		<a href="#inicio" class="brand">
+			<svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+		<circle cx="32" cy="32" r="30" fill="#242019" stroke="rgba(244,239,229,.25)"/>
+		<text x="30" y="43" font-family="Syne, sans-serif" font-weight="800" font-size="30" fill="#F4EFE5" text-anchor="middle">G</text>
+		<circle cx="46" cy="19" r="5" fill="#F39C2D"/>
+	</svg>
+			<b>ANDRES<i>.</i>GALLEGO</b>
+		</a>
+		<p class="tag">Estrategia visual orientada al <b>impacto</b>.</p>
+		<p class="cr">© 2026 — Oliva, Valencia — España</p>
+	</div>
+</footer>
+
+<!-- Lightbox para los videos Full HD -->
+<div class="lb" id="lb" role="dialog" aria-modal="true">
+	<button class="lb-close" id="lbClose" aria-label="Cerrar">✕</button>
+	<div class="lb-box">
+		<p class="lb-t" id="lbTitle">Reproduciendo</p>
+		<video id="lbVideo" controls playsinline></video>
+		<div id="lbFrame"></div>
+	</div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/render.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
